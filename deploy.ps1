@@ -7,8 +7,8 @@ $root = $PSScriptRoot
 $src  = Join-Path $root 'dist\portfolio\browser'
 $pub  = Join-Path (Split-Path $root) '_ghpages'
 
-Write-Host '==> Building (base-href=/portfolio/)...' -ForegroundColor Cyan
-& ng build --base-href=/portfolio/
+Write-Host '==> Building (base-href=/)...' -ForegroundColor Cyan
+& ng build --base-href=/
 
 if (Test-Path $pub) { Remove-Item $pub -Recurse -Force }
 New-Item -ItemType Directory -Force $pub | Out-Null
@@ -21,9 +21,9 @@ Push-Location $pub
 git init -b gh-pages | Out-Null
 git add -A
 git -c user.name='Jesus Callisaya' -c user.email='jesuscallisayasalinas@gmail.com' commit -m 'deploy: portfolio static build' | Out-Null
-git remote add origin "https://$Token@github.com/arthasjoshimar/portfolio.git"
+git remote add origin "https://$Token@github.com/arthasjoshimar/arthasjoshimar.github.io.git"
 git push -f origin gh-pages
-git remote set-url origin 'https://github.com/arthasjoshimar/portfolio.git'
+git remote set-url origin 'https://github.com/arthasjoshimar/arthasjoshimar.github.io.git'
 Pop-Location
 
-Write-Host '==> Done. Live at https://arthasjoshimar.github.io/portfolio/' -ForegroundColor Green
+Write-Host '==> Done. Live at https://arthasjoshimar.github.io' -ForegroundColor Green
