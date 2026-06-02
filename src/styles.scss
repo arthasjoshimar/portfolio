@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap');
+
+/* ---------- Design tokens ---------- */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Sora', var(--font-sans);
+
+  --accent: #dd0031;          /* Angular red */
+  --accent-2: #c3002f;
+  --accent-grad: linear-gradient(135deg, #dd0031 0%, #ff2d78 55%, #9b4dff 100%);
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --maxw: 1080px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark (default) */
+:root,
+[data-theme='dark'] {
+  --bg: #0a0a0f;
+  --bg-elev: #121219;
+  --bg-card: #15151d;
+  --border: #24242f;
+  --text: #f2f3f7;
+  --text-dim: #a6a7b5;
+  --text-mute: #6f7080;
+  --shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.7);
+  --glow: radial-gradient(60% 60% at 50% 0%, rgba(221, 0, 49, 0.22), transparent 70%);
+}
+
+/* Light */
+[data-theme='light'] {
+  --bg: #f7f8fb;
+  --bg-elev: #ffffff;
+  --bg-card: #ffffff;
+  --border: #e6e8ef;
+  --text: #14151c;
+  --text-dim: #50525f;
+  --text-mute: #8a8c99;
+  --shadow: 0 20px 45px -22px rgba(20, 22, 40, 0.22);
+  --glow: radial-gradient(60% 60% at 50% 0%, rgba(221, 0, 49, 0.12), transparent 70%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition), color var(--transition);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
