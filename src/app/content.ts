@@ -124,6 +124,22 @@ export const PROJECTS: Project[] = [
     placeholder: false,
   },
   {
+    name: 'Wapu — Booking & Business Suite',
+    year: '2026',
+    accent: '#2563eb',
+    tagline: {
+      en: 'Multi-module booking & ERP platform',
+      es: 'Plataforma de reservas y gestión multi-módulo',
+    },
+    description: {
+      en: 'React 19 + Vite SPA for the Wapu reservation & management system: appointments, clients, HR & payroll, accounting, invoicing, inventory, cash register and analytics. Real-time IoT over MQTT, Leaflet maps, ECharts dashboards and PDF reporting — data layer with TanStack Query, forms validated with Zod.',
+      es: 'SPA React 19 + Vite para el sistema de reservas y gestión Wapu: citas, clientes, RR. HH. y nóminas, contabilidad, facturación, inventario, caja y analítica. IoT en tiempo real con MQTT, mapas Leaflet, dashboards con ECharts y reportes PDF — capa de datos con TanStack Query y formularios validados con Zod.',
+    },
+    tech: ['React 19', 'Vite', 'TypeScript', 'TanStack Query', 'Tailwind', 'Radix UI', 'Leaflet', 'ECharts', 'MQTT'],
+    url: 'https://wapu.vercel.app',
+    placeholder: false,
+  },
+  {
     name: '',
     year: '',
     accent: '#9b4dff',
